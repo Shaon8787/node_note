@@ -1,0 +1,21 @@
+react tan query
+import {useQuery} from '@tanstack/react-query'
+
+//data load
+const {data:=[]} = useQuery({
+        queryKey: [''],
+         queryFn:async()=> {
+            try{
+                const res = await fetch('http://localhost:5000/',{
+                    headers: {
+                        authorization: `bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
+               
+
+            }
+            catch{
+
+            }
+        }
+    })
